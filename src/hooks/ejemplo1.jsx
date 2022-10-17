@@ -26,9 +26,31 @@ const Ejemplo1 = () => {
     const [contador, setContador] = useState(valorInicial);
     const [persona, setPersona] = useState(personaInicial);
 
+    //Metodo para incrementar el contador
+    function incrementarContador() {
+        setContador(contador + 1);
+    }
+
+    //Metodo para actualizar el estado de la persona
+    function actualizarPersona() {
+        setPersona(
+            {
+                nombre: 'Joel',
+                email: 'joel@gmail.com'
+            }
+        )
+    }
+
     return (
         <div>
-      
+            <h1>Ejemplo de uso del useState</h1>
+            <h3>Contador: {contador}</h3>
+            <h2>Datos de la Persona</h2>
+            <h3>Nombre: {persona.nombre}</h3>
+            <h3>Email: {persona.email}</h3>
+            {/* Botones para actualizar el estado */}
+            <button onClick={incrementarContador}>Incrementar Contador</button>
+            <button onClick={actualizarPersona}>Actualizar Persona</button>
         </div>
     )
 }
