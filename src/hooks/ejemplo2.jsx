@@ -39,6 +39,15 @@ const Ejemplo2 = () => {
     return (
         <div>
             <h1>EJEMPLO DE USO de useState(), useRef(), useEffect()</h1>
+            <h2>CONTADOR 1: {contador1}</h2>
+            <h2>CONTADOR 2: {contador2}</h2>
+            {/* Elemento referenciado */}
+            <h4 ref={miRef}></h4>
+
+            <div>
+                <button onClick={incrementar1}>Incrementar contador 1</button>
+                <button onClick={incrementar2}>Incrementar contador 2</button>
+            </div>
         </div>
     )
 }
