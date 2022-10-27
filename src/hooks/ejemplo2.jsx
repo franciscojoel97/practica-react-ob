@@ -36,6 +36,17 @@ const Ejemplo2 = () => {
         console.log(miRef);
     });
 
+    /**
+     * ? Caso 2: Ejecutar solo cuando cambie contador 1
+    */
+    
+/*     useEffect(() => {
+        console.log('CAMBIO EN EL ESTADO DEL CONTADOR 1');
+        console.log('Mostrando referencia a elemento del DOM');
+        console.log(miRef);
+    }, [contador1]); */
+
+
     return (
         <div>
             <h1>EJEMPLO DE USO de useState(), useRef(), useEffect()</h1>
