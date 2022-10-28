@@ -38,10 +38,28 @@ const Componente2 = () => {
 }
 
 export default function MiComponenteConContexto() {
+
+  const estadoInicial = {
+    token: '11121997',
+    sesion: 1
+  }
+
+  //Creacion del estado de este componente
+  const [sessionData, setSessionData] = useState(estadoInicial);
+
+  function actualizarSesion() {
+    setSessionData(
+      {
+        token: 'JWT11121997',
+        session: sessionData.sesion + 1
+      }
+    )
+  }
+
   return (
-    <div>
-      
-    </div>
+    <miContexto.Provider value={sessionData}>
+      {/* Todo lo que esta aqui dentro puede leer datos de sessionData */}
+    </miContexto.Provider>
   )
 }
 
