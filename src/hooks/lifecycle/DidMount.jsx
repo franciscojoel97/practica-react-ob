@@ -4,7 +4,7 @@
  * en componente funcional 
 */
 
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 
 export class Didmount extends Component {
 
@@ -22,9 +22,14 @@ export class Didmount extends Component {
 }
 
 export const DidmountHook = () => {
+    
+    useEffect(() => {
+        console.log('Comportamiento antes de que el componente sea añadido al DOM (renderice)');
+    },[]);
+    
     return (
         <div>
-
+            <h1>DidMount</h1>
         </div>
     );
 }
