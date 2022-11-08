@@ -5,6 +5,7 @@ import ComponenteA from './components/container/componenteA';
 import Ejemplo1 from './hooks/ejemplo1';
 import Ejemplo2 from './hooks/ejemplo2';
 import MiComponenteConContexto from './hooks/ejemplo3';
+import GreetingStyled from './components/pure/greetingStyled';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         {/* Ejemplo de uso de hooks */}
         {/* <Ejemplo1></Ejemplo1> */}
         {/* <Ejemplo2></Ejemplo2> */}
-        <MiComponenteConContexto></MiComponenteConContexto>
+        {/* <MiComponenteConContexto></MiComponenteConContexto> */}
+        <GreetingStyled name="Francisco"></GreetingStyled>
       </header>
     </div>
   );
