@@ -32,8 +32,10 @@ const TaskListComponent = () => {
                         <h4>Your Task: </h4>
                     </div>
                     {/* Card content */}
-                    <div className='card-body'>
-
+                    <div className='card-body' data-mdb-perfect-scrollbar='true' style={ {position: 'relative', height: '400px'}}>
+                        <table>
+                            <tr></tr>
+                        </table>
                     </div>
                 </div>
             </div>
