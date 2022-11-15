@@ -26,7 +26,7 @@ const TaskListComponent = () => {
 
     return (
         <div>
-            <div>
+            <div className='col-12'>
                 <h1>Tus Tareas</h1>
             </div>
             {/* TODO: Aplicar un For/Map para renderizar una lista */}

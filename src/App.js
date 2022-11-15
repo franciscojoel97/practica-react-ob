@@ -10,7 +10,7 @@ import GreetingStyled from './components/pure/greetingStyled';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header"> */}
         <img src={logo} className="App-logo" alt="logo" />
         {/* <TaskListComponent></TaskListComponent> */}
         {/* <ComponenteA></ComponenteA> */}
@@ -19,7 +19,7 @@ function App() {
         {/* <Ejemplo2></Ejemplo2> */}
         {/* <MiComponenteConContexto></MiComponenteConContexto> */}
         <GreetingStyled name="Francisco"></GreetingStyled>
-      </header>
+     {/*  </header> */}
     </div>
   );
 }
