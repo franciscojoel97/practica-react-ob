@@ -27,7 +27,15 @@ const TaskListComponent = () => {
     return (
         <div>
             <div className='col-12'>
-                <h1>Tus Tareas</h1>
+                <div className='card'>
+                    <div className='card-header p-3'>
+                        <h4>Your Task: </h4>
+                    </div>
+                    {/* Card content */}
+                    <div className='card-body'>
+
+                    </div>
+                </div>
             </div>
             {/* TODO: Aplicar un For/Map para renderizar una lista */}
             <TaskComponent task={defaultTask}></TaskComponent>

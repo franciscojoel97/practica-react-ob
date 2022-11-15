@@ -18,7 +18,7 @@ function App() {
         {/* <Ejemplo1></Ejemplo1> */}
         {/* <Ejemplo2></Ejemplo2> */}
         {/* <MiComponenteConContexto></MiComponenteConContexto> */}
-        <GreetingStyled name="Francisco"></GreetingStyled>
+        {/* <GreetingStyled name="Francisco"></GreetingStyled> */}
      {/*  </header> */}
     </div>
   );
