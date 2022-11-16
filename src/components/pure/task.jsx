@@ -25,7 +25,7 @@ const TaskComponent = ({ task }) => {
         </td>
         <td className='align-middle'>
           {/* TODO: sustituir por iconos */}
-          <span>{task.completed}</span>
+          <span>{task.completed ? 'Completed' : 'Pending'}</span>
         </td>
       </tr>
       /* <div>
