@@ -20,6 +20,7 @@ function App() {
         {/* <MiComponenteConContexto></MiComponenteConContexto> */}
         {/* <GreetingStyled name="Francisco"></GreetingStyled> */}
      {/*  </header> */}
+     <TaskListComponent></TaskListComponent>
     </div>
   );
 }

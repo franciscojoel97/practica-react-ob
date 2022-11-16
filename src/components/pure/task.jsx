@@ -13,7 +13,20 @@ const TaskComponent = ({ task }) => {
 
     return (
       <tr className='fw-normal'>
-        <th></th>
+        <th>
+          <span className='ms-2'>{task.name}</span>
+        </th>
+        <td className='align-middle'>
+          <span>{task.description}</span>
+        </td>
+        <td className='align-middle'>
+          {/* TODO: Sustituir por un badge */}
+          <span>{task.level}</span>
+        </td>
+        <td className='align-middle'>
+          {/* TODO: sustituir por iconos */}
+          <span>{task.completed}</span>
+        </td>
       </tr>
       /* <div>
         <h2>Nombre: { task.name }</h2>
