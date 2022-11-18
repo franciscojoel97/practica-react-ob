@@ -11,6 +11,8 @@ const TaskComponent = ({ task }) => {
         }
     }, [task])
 
+    
+
     return (
         <tr className='fw-normal'>
             <th>
@@ -29,15 +31,9 @@ const TaskComponent = ({ task }) => {
                     (<i className='bi-toggle-on' style={{color: 'green'}}></i>)
                     : (<i className='bi-toggle-off' style={{color: 'gray'}}></i>)
                 }
-                <span>{task.completed ? 'Completed' : 'Pending'}</span>
+                <i className='bi-trash' style={{color: 'tomato'}}></i>
             </td>
         </tr>
-        /* <div>
-          <h2>Nombre: { task.name }</h2>
-          <h3>Descripcion: { task.description }</h3>
-          <h4>Level: { task.level }</h4>
-          <h5>This task is: { task.completed ? 'COMPLETED':'PENDING'}</h5>
-        </div> */
     );
 }
 
