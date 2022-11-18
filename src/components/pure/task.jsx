@@ -32,7 +32,7 @@ const TaskComponent = ({ task }) => {
                     </h6>
                 )
             
-            case LEVELS.URGENT:
+            case LEVELS.BLOCKING:
                 return(
                     <h6 className='mb-0'>
                         <span className='badge bg-danger'>{task.level}</span>
