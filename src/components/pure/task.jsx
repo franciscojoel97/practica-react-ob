@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Task } from '../../models/task.class'
+import { LEVELS } from '../../models/levels.enum'
 
 const TaskComponent = ({ task }) => {
 
@@ -11,7 +12,37 @@ const TaskComponent = ({ task }) => {
         }
     }, [task])
 
-    
+    /**
+     *  Funcion para retornar un badge dependiendo 
+     *  del nivel de la tarea
+    */
+    function taskLevelBadge() {
+        switch(task.level) {
+            case LEVELS.NORMAL:
+                return(
+                    <h6 className='mb-0'>
+                        <span className='badge bg-primary'>{task.level}</span>
+                    </h6>
+                )
+            
+            case LEVELS.URGENT:
+                return(
+                    <h6 className='mb-0'>
+                        <span className='badge bg-warning'>{task.level}</span>
+                    </h6>
+                )
+            
+            case LEVELS.URGENT:
+                return(
+                    <h6 className='mb-0'>
+                        <span className='badge bg-danger'>{task.level}</span>
+                    </h6>
+                )
+            
+            default:
+                break;
+        }
+    }
 
     return (
         <tr className='fw-normal'>
@@ -22,8 +53,8 @@ const TaskComponent = ({ task }) => {
                 <span>{task.description}</span>
             </td>
             <td className='align-middle'>
-                {/* TODO: Sustituir por un badge */}
-                <span>{task.level}</span>
+                {/* Funcion que retorna un badge */}
+                {taskLevelBadge()}
             </td>
             <td className='align-middle'>
                 {/* TODO: sustituir por iconos */}
