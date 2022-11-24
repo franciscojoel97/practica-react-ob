@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { LEVELS } from '../../models/levels.enum';
 import { Task } from '../../models/task.class';
+import Taskform from '../pure/forms/taskForm';
 import TaskComponent from '../pure/task';
 
 const TaskListComponent = () => {
@@ -53,6 +54,7 @@ const TaskListComponent = () => {
                             </tbody>
                         </table>
                     </div>
+                    <Taskform></Taskform>
                 </div>
             </div>
         </div>
