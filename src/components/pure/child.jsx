@@ -12,9 +12,10 @@ const Child = ({name}) => {
 
     return (
         <div>
-            <p>Child Component</p>
-            <button onClick={() => console.log('Boton 1 pulsado')}>Boton 1</button>
-            <button onClick={() => console.log('Boton 2 pulsado')}>Boton 2</button>
+            <p onMouseOver={() => console.log('On Mouse Over')}>Child Component</p>
+            <button onClick={() => console.log('Boton 1 pulsado')}>Button 1</button>
+            <button onClick={(pressButton) => console.log('Boton 2 pulsado')}>Button 2</button>
+            <button onClick={pressButtonParams('Hello')}>Button 3</button>
         </div>
     )
 }
