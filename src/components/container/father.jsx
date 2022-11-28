@@ -8,7 +8,7 @@ const Father = () => {
     }
 
     return (
-        <div>
+        <div style={{background: 'tomato', padding: '10px'}}>
             <Child name='Francisco' send={showMessage}></Child>
         </div>
     )

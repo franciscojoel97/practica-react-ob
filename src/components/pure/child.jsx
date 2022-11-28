@@ -14,7 +14,7 @@ const Child = ({name, send}) => {
     }
 
     return (
-        <div>
+        <div style={{background: 'cyan', padding: '30px'}}>
             <p onMouseOver={() => console.log('On Mouse Over')}>Child Component</p>
             <button onClick={() => console.log('Boton 1 pulsado')}>Button 1</button>
             <button onClick={(pressButton) => console.log('Boton 2 pulsado')}>Button 2</button>
@@ -27,7 +27,7 @@ const Child = ({name, send}) => {
                 value='Default text'
                 ref={messageRef}
             />
-            <button onClick={() => send('Hellod Father')}>
+            <button onClick={() => send(messageRef.current.value)}>
                 Send Message
             </button>
         </div>
