@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Child = ({name}) => {
+const Child = ({name, send}) => {
 
     function pressButton() {
         alert(`Default Text`)
@@ -19,8 +19,12 @@ const Child = ({name}) => {
             <input 
                 placeholder='Insert a text'
                 onFocus={() => console.log('Input focused')}
-                onChange={(e) => console.log('Input changed: ', e)}
+                onChange={(e) => console.log('Input changed: ', e.target.value)}
+                onCopy={() => console.log('Copied text from Input')}
             />
+            <button onClick={() => send('Hellod Father')}>
+                Send Message
+            </button>
         </div>
     )
 }
