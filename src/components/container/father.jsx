@@ -9,7 +9,7 @@ const Father = () => {
 
     return (
         <div>
-            <Child></Child>
+            <Child name='Francisco' send={showMessage}></Child>
         </div>
     )
 }

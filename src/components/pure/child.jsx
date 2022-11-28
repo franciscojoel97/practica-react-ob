@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 const Child = ({name, send}) => {
 
+    const messageRef = useRef('');
+
     function pressButton() {
-        alert(`Default Text`)
+        const text = messageRef.current.value;
+        alert(`Text in input ${text}`)
     }
 
     function pressButtonParams(text) {
@@ -21,6 +24,8 @@ const Child = ({name, send}) => {
                 onFocus={() => console.log('Input focused')}
                 onChange={(e) => console.log('Input changed: ', e.target.value)}
                 onCopy={() => console.log('Copied text from Input')}
+                value='Default text'
+                ref={messageRef}
             />
             <button onClick={() => send('Hellod Father')}>
                 Send Message
