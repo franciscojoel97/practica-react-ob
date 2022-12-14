@@ -27,6 +27,10 @@ const TaskListComponent = () => {
         console.log('TODO: Cambiar estado de una tarea');
     }
 
+    function completeTask(task) {
+        console.log('Complete this task: ', task)
+    }
+
     return (
         <div>
             <div className='col-12'>
@@ -48,7 +52,7 @@ const TaskListComponent = () => {
                             <tbody>
                                 { tasks.map((task, index) => {
                                     return (
-                                        <TaskComponent key={index} task={task}></TaskComponent>
+                                        <TaskComponent key={index} task={task} complete={complete={completeTask}}></TaskComponent>
                                     )
                                 })}
                             </tbody>

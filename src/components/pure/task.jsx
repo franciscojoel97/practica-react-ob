@@ -51,7 +51,7 @@ const TaskComponent = ({ task }) => {
 
     function taskCompletedIcon() {
         if(task.completed) {
-            return(<i className='bi-toggle-on' style={{color: 'green'}}></i>)
+            return(<i onClick={complete(task)} className='bi-toggle-on' style={{color: 'green'}}></i>)
         } else {
             return(<i className='bi-toggle-off' style={{color: 'gray'}}></i>)
         }
@@ -79,7 +79,8 @@ const TaskComponent = ({ task }) => {
 }
 
 TaskComponent.propTypes = {
-    task: PropTypes.instanceOf(Task)
+    task: PropTypes.instanceOf(Task).isRequired,
+    complete: PropTypes.func.isRequired
 }
 
 export default TaskComponent;
